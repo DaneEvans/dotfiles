@@ -3,6 +3,17 @@ LOG_FILE="/workspaces/cmfive-boilerplate/.dotfiles/log.txt"
 mkdir /workspaces/cmfive-boilerplate/.dotfiles
 
 
+# Add additional extensions 
+code --install-extension "Gruntfuggly.todo-tree" 
+
+## PHP debug
+# this is to be done on the host.
+# we have two, the main machine for cmfive.php, 
+# and webapp 
+#docker exec nginx-php7.4 apt-get -y install php-xdebug
+
+
+
 # This is left here as a template, it all works, but is better put into the prebuild or post build, as it's general use 
 
 # apt update

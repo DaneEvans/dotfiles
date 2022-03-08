@@ -1,0 +1,19 @@
+activity bar - docker containers on top, then explore     - maybe a settings sync thing 
+
+lose the preview pane - settings sync
+"editor.minimap.enabled": false
+
+ 
+
+todo tree - I want it, I know Adam does, but I'm going to have it personal - settings sync again. 
+I've got it in dotfiles for now . 
+
+
+Peacock choose colour based on commit no. /branch, something like that - it is possible to do it randomly too 
+
+
+
+
+refs: 
+https://code.visualstudio.com/docs/editor/command-line
+
