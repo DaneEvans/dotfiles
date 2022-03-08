@@ -1,1 +1,7 @@
 
+# CS fixer 
+cd /tools/cs-fixer
+wget https://cs.symfony.com/download/php-cs-fixer-v3.phar -O php-cs-fixer
+
+chmod a+x php-cs-fixer
+#mv php-cs-fixer /usr/local/bin/php-cs-fixer
