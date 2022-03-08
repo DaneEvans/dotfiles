@@ -1,5 +1,6 @@
-LOG_FILE="/workspaces/cmfive-boilerplate/.dotfile/log.txt"
 
+LOG_FILE="/workspaces/cmfive-boilerplate/.dotfile/log.txt"
+mkdir /workspaces/cmfive-boilerplate/.dotfile
 
 apt update
 #php
@@ -8,6 +9,7 @@ apt install php-fpm >> $LOG_FILE
 echo which php >> $LOG_FILE
 
 # CS fixer 
+mkdir /tools/cs-fixer
 cd /tools/cs-fixer
 wget https://cs.symfony.com/download/php-cs-fixer-v3.phar -O php-cs-fixer >> $LOG_FILE
 
