@@ -2,22 +2,23 @@
 LOG_FILE="/workspaces/cmfive-boilerplate/.dotfiles/log.txt"
 mkdir /workspaces/cmfive-boilerplate/.dotfiles
 
-apt update
-#php
-apt -y install php-fpm >> $LOG_FILE
 
-echo which php >> $LOG_FILE
+# This is left here as a template, it all works, but is better put into the prebuild or post build, as it's general use 
 
-# CS fixer 
-mkdir /tools/cs-fixer
-cd /tools/cs-fixer
-wget https://cs.symfony.com/download/php-cs-fixer-v3.phar -O php-cs-fixer >> $LOG_FILE
+# apt update
+# apt -y install php-fpm >> $LOG_FILE
 
-chmod a+x php-cs-fixer
-mv php-cs-fixer /usr/local/bin/php-cs-fixer
+# which php >> $LOG_FILE
 
-echo which php-cs-fixer >> $LOG_FILE
+# # CS fixer 
+# mkdir /tools/cs-fixer
+# cd /tools/cs-fixer
+# wget https://cs.symfony.com/download/php-cs-fixer-v3.phar -O php-cs-fixer >> $LOG_FILE
 
-exit 0
+# chmod a+x php-cs-fixer
+# mv php-cs-fixer /usr/local/bin/php-cs-fixer
 
-# php 
+# which php-cs-fixer >> $LOG_FILE
+
+# exit 0
+
