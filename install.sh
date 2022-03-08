@@ -1,10 +1,10 @@
 
-LOG_FILE="/workspaces/cmfive-boilerplate/.dotfile/log.txt"
-mkdir /workspaces/cmfive-boilerplate/.dotfile
+LOG_FILE="/workspaces/cmfive-boilerplate/.dotfiles/log.txt"
+mkdir /workspaces/cmfive-boilerplate/.dotfiles
 
 apt update
 #php
-apt install php-fpm >> $LOG_FILE
+apt -y install php-fpm >> $LOG_FILE
 
 echo which php >> $LOG_FILE
 
