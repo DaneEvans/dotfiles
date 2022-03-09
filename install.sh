@@ -5,6 +5,9 @@ mkdir /workspaces/cmfive-boilerplate/.dotfiles
 
 # Add additional extensions 
 code --install-extension "Gruntfuggly.todo-tree" 
+code --install-extension "oderwat.indent-rainbow"
+#code --install-extension "ivanhofer.git-assistant" ## I don't know if I want this one yet. 
+
 
 ## PHP debug
 # this is to be done on the host.
@@ -31,5 +34,5 @@ code --install-extension "Gruntfuggly.todo-tree"
 
 # which php-cs-fixer >> $LOG_FILE
 
-# exit 0
+exit 0
 
