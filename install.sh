@@ -2,6 +2,9 @@
 LOG_FILE="/workspaces/cmfive-boilerplate/.dotfiles/log.txt"
 mkdir /workspaces/cmfive-boilerplate/.dotfiles
 
+## Set an environment variable for user email 
+CMFIVE_USER_EMAIL=dane@2pisofftware.com
+export CMFIVE_USER_EMAIL
 
 # Add additional extensions 
 code --install-extension "Gruntfuggly.todo-tree" 
