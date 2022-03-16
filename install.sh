@@ -9,6 +9,7 @@ export CMFIVE_USER_EMAIL
 # Add additional extensions 
 code --install-extension "Gruntfuggly.todo-tree" 
 code --install-extension "oderwat.indent-rainbow"
+code --install-extension "mhutchie.vscode-git-graph"
 #code --install-extension "ivanhofer.git-assistant" ## I don't know if I want this one yet. 
 
 
