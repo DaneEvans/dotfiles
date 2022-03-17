@@ -3,7 +3,8 @@ activity bar - docker containers on top, then explore     - maybe a settings syn
 lose the preview pane - settings sync
 "editor.minimap.enabled": false
 
- 
+ git graph
+ or git lens, try both and settle on one. 
 
 todo tree - I want it, I know Adam does, but I'm going to have it personal - settings sync again. 
 I've got it in dotfiles for now . 
