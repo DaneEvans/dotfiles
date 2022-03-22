@@ -10,9 +10,8 @@ export CMFIVE_USER_EMAIL
 code --install-extension "Gruntfuggly.todo-tree" 
 code --install-extension "oderwat.indent-rainbow"
 code --install-extension "mhutchie.git-graph"
-
-#code --install-extension "ivanhofer.git-assistant" ## I don't know if I want this one yet. 
-
+code --install-extension "eamodio.gitlens"
+code --install-extension "ivanhofer.git-assistant" # Git (submodule) assistant # I don't know if I want this one yet. 
 
 ## PHP debug
 # this is to be done on the host.
