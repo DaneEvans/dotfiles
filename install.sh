@@ -2,8 +2,10 @@
 LOG_FILE="/workspaces/cmfive-boilerplate/.dotfiles/log.txt"
 mkdir /workspaces/cmfive-boilerplate/.dotfiles
 
+echo "dotfile loaded" > LOG_FILE
+
 ## Set an environment variable for user email 
-CMFIVE_USER_EMAIL=dane@2pisofftware.com
+CMFIVE_USER_EMAIL=dane@2pisoftware.com
 export CMFIVE_USER_EMAIL
 
 # Add additional extensions 
