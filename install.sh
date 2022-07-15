@@ -8,6 +8,26 @@ echo "dotfile loaded" > LOG_FILE
 CMFIVE_USER_EMAIL=dane@2pisoftware.com
 export CMFIVE_USER_EMAIL
 
+
+## Setup GHCLI 
+# uses GITHUB_TOKEN 
+# dump the existing token, it has no rights 
+export GITHUB_TOKEN=
+# Copy in the one from the secrets. note, this is only valid for this script
+export GITHUB_TOKEN=${PERSONAL_TOKEN}
+gh cs list
+
+
+## Setup the ssh key
+eval "$(ssh-agent -s)"
+ssh-add - <<< "${PERSONAL_SSH_KEY}"
+
+if ! grep github.com ~/.ssh/known_hosts > /dev/null
+then
+	ssh-keyscan github.com >> $HOME/.ssh/known_hosts
+fi
+
+
 # Add additional extensions 
 code --install-extension "Gruntfuggly.todo-tree" 
 code --install-extension "oderwat.indent-rainbow"
