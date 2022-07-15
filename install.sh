@@ -1,6 +1,6 @@
 
-LOG_FILE="/workspaces/.dotfiles/log.txt"
-mkdir /workspaces/.dotfiles
+LOG_FILE=$PWD + "./.dotfiles/log.txt"
+mkdir $PWD + "./.dotfiles
 
 echo "dotfile loaded" > LOG_FILE
 
@@ -22,7 +22,9 @@ gh cs list
 eval "$(ssh-agent -s)"
 ssh-add - <<< "${PERSONAL_SSH_KEY}"
 
+mkdir ~/.ssh
 touch ~/.ssh/id_rsa.pub
+
 if [ -f "~/.ssh/id_rsa.pub" ]
 then 
     printf "%s" "${PERSONAL_SSH_KEY}" > "~/.ssh/id_rsa.pub"
