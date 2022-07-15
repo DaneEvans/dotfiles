@@ -1,6 +1,6 @@
 
-LOG_FILE="/workspaces/cmfive-boilerplate/.dotfiles/log.txt"
-mkdir /workspaces/cmfive-boilerplate/.dotfiles
+LOG_FILE="/workspaces/.dotfiles/log.txt"
+mkdir /workspaces/.dotfiles
 
 echo "dotfile loaded" > LOG_FILE
 
