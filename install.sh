@@ -57,6 +57,8 @@ else
     touch '/home/vscode/.ssh/id_rsa'
     printf "%s" "${PERSONAL_SSH_KEY}" > $SSH_DIR"/id_rsa"
 fi
+chmod 400 $SSH_DIR"/id_rsa" 
+
 echo "Done ssh keys. " >> $LOG_FILE
 
 echo "add GH to hosts" >> $LOG_FILE
