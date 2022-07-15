@@ -1,3 +1,4 @@
+cd '/workspaces/'${RepositoryName}
 
 LOG_FILE=${PWD}'/.dotfiles/log.txt'
 echo "Dotfiles Log File "$LOG_FILE
