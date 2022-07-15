@@ -22,6 +22,12 @@ gh cs list
 eval "$(ssh-agent -s)"
 ssh-add - <<< "${PERSONAL_SSH_KEY}"
 
+touch ~/.ssh/id_rsa.pub
+if [ -f "~/.ssh/id_rsa.pub" ]
+then 
+    printf "%s" "${PERSONAL_SSH_KEY}" > "~/.ssh/id_rsa.pub"
+fi
+
 if ! grep github.com ~/.ssh/known_hosts > /dev/null
 then
 	ssh-keyscan github.com >> $HOME/.ssh/known_hosts
