@@ -7,16 +7,17 @@ if [ ! -d $PWD'/.dotfiles' ]; then
     mkdir $PWD'/.dotfiles'
 fi
 
-#touch $LOG_FILE
-echo "Dotfile loaded" > $LOG_FILE
+date +"%FORMAT_STRING"
 
+echo "Dotfile loaded at $(date +"%H:%M:%SS, %d_%m_%Y")" > $LOG_FILE
+
+# add .dotfiles folder to the gitignore
 if ! grep -Fxq '.dotfiles/' $PWD'/.gitignore'
 then
     echo "" >> $PWD'/.gitignore'
     echo "#Dotfiles " >> $PWD'/.gitignore'
     echo '.dotfiles/' >> $PWD'/.gitignore'
     echo "Added lines to .gitignore" >> $LOG_FILE
-
 fi
 echo "Done .gitignore" >> $LOG_FILE
 
@@ -35,16 +36,12 @@ export GITHUB_TOKEN=
 export GITHUB_TOKEN=${PERSONAL_TOKEN}
 gh cs list
 ## gets us this list, but doesn't persist ... 
-echo "Got a codespaces list" >> $LOG_FILE
+echo "Got a codespaces list: " >> $LOG_FILE
+gh cs list >> $LOG_FILE
+echo "... Done"
 
-#export GITHUB_TOKEN=
 
-#gh auth login --with-token <<< ${ALL_TOKEN}
-
-## Setup the ssh key
-#ssh-keygen -t rsa -b 4096 -C "your_email@example.com"eval "$(ssh-agent -s)"
-#ssh-add - <<< "${PERSONAL_SSH_KEY}"
-
+## Setup the ssh key to clone any private repos that we need. 
 echo "Setting up SSH keys" >> $LOG_FILE
 
 SSH_DIR="/home/vscode/.ssh"
@@ -52,41 +49,38 @@ if [ ! -d $SSH_DIR ]; then
     mkdir $SSH_DIR
 fi
 
-if [ -f $SSH_DIR"/id_rsa" ]
+if [ ! -f $SSH_DIR"/id_rsa" ]
 then 
-    printf "%s" "${PERSONAL_SSH_KEY}" > $SSH_DIR"/id_rsa"
-else 
     touch '/home/vscode/.ssh/id_rsa'
-    printf "%s" "${PERSONAL_SSH_KEY}" > $SSH_DIR"/id_rsa"
 fi
+printf "%s" "${PERSONAL_SSH_KEY}" > $SSH_DIR"/id_rsa"
 chmod 400 $SSH_DIR"/id_rsa" 
+echo "... Done"
 
-echo "Done ssh keys. " >> $LOG_FILE
-
-echo "add GH to hosts" >> $LOG_FILE
-
+echo "adding Github to hosts" >> $LOG_FILE
 ## ad github to hosts to prevent a warning 
 if ! grep github.com $SSH_DIR/known_hosts > /dev/null
 then
 	ssh-keyscan github.com >> $SSH_DIR/known_hosts
 fi
+echo "... Done"
+
 
 echo "Cloning a private repo " >> $LOG_FILE
 
-
 # test clone a private repo 
-git clone git@github.com:2pisoftware/artifax-module-bundle.git $PWD'/artifax-module-bundle'
+git clone git@github.com:2pisoftware/artifax-module-bundle.git $PWD'/artifax-module-bundle' >> $LOG_FILE
+echo "... Done"
 
-echo "Done" >> $LOG_FILE
 
-exit 0 
-
+echo "Loading Personal Extensions: "
 # Add additional extensions 
 code --install-extension "Gruntfuggly.todo-tree" 
 code --install-extension "oderwat.indent-rainbow"
 code --install-extension "mhutchie.git-graph"
 code --install-extension "eamodio.gitlens"
 code --install-extension "ivanhofer.git-assistant" # Git (submodule) assistant # I don't know if I want this one yet. 
+echo "... Done"
 
 ## PHP debug
 # this is to be done on the host.
