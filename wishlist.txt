@@ -1,16 +1,24 @@
-activity bar - docker containers on top, then explore     - maybe a settings sync thing 
+ - [x] - activity bar - docker containers on top, then explore     
+	- maybe a settings sync thing? I know I have it working now. 
 
-lose the preview pane - settings sync
-"editor.minimap.enabled": false
+ - [x] - lose the preview pane - settings sync
+	"editor.minimap.enabled": false
 
- git graph
- or git lens, try both and settle on one. 
+- [x] Git visualiser 
+	-  git graph - gives the gitk style view 
+ 	-  git lens - gives blame, and easier to see branch and commit history. 
+	- both are useful 
 
-todo tree - I want it, I know Adam does, but I'm going to have it personal - settings sync again. 
-I've got it in dotfiles for now . 
+- [x] todo tree - I want it, I know Adam does, but I'm going to have it personal 
+	- settings sync again. 
+	- I've got it in dotfiles for now . 
 
 
-Peacock choose colour based on commit no. /branch, something like that - it is possible to do it randomly too 
+ - [ ] - Peacock choose colour based on commit no. /branch, something like that 
+	- hash the branch name, then allocate a colour based on that?? 
+		- would often be ugly, but would be distinct. 
+	- This is in the post Create script I think . 
+	- it is possible to do it randomly too 
 
 
 
