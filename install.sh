@@ -66,11 +66,11 @@ fi
 echo "... Done"
 
 
-echo "Cloning a private repo " >> $LOG_FILE
+# echo "Cloning a private repo " >> $LOG_FILE
 
-# test clone a private repo 
-git clone git@github.com:2pisoftware/artifax-module-bundle.git $PWD'/artifax-module-bundle' >> $LOG_FILE
-echo "... Done"
+# # test clone a private repo 
+# git clone git@github.com:2pisoftware/artifax-module-bundle.git $PWD'/artifax-module-bundle' >> $LOG_FILE
+# echo "... Done"
 
 
 echo "Loading Personal Extensions: "
