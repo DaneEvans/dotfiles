@@ -78,8 +78,9 @@ echo "Loading Personal Extensions: "
 code --install-extension "Gruntfuggly.todo-tree" 
 code --install-extension "oderwat.indent-rainbow"
 code --install-extension "mhutchie.git-graph"
-code --install-extension "eamodio.gitlens"
+#code --install-extension "eamodio.gitlens"
 code --install-extension "mutantdino.resourcemonitor"
+code --install-extenxion "github.vscode-github-actions"
 #code --install-extension "ivanhofer.git-assistant" # Git (submodule) assistant # Seems to be ver slow, and not sure it offers value 
 echo "... Done"
 
