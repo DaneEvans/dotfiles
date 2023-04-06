@@ -1,7 +1,7 @@
 cd '/workspaces/'${RepositoryName}
 
 LOG_FILE=${PWD}'/.dotfiles/log.txt'
-echo "Dotfiles_WIP Log File "$LOG_FILE
+echo "Dotfiles_WIP Log File " >> $LOG_FILE
 
 if [ ! -d $PWD'/.dotfiles' ]; then 
     mkdir $PWD'/.dotfiles'
