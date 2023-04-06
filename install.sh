@@ -1,7 +1,6 @@
 cd '/workspaces/'${RepositoryName}
 
 LOG_FILE=${PWD}'/.dotfiles/log.txt'
-echo "Dotfiles_WIP Log File " >> $LOG_FILE
 
 if [ ! -d $PWD'/.dotfiles' ]; then 
     mkdir $PWD'/.dotfiles'
@@ -28,17 +27,17 @@ export CMFIVE_USER_EMAIL
 echo "Set Your email" >> $LOG_FILE
 
 
-## Setup GHCLI 
-# uses GITHUB_TOKEN 
-# dump the existing token, it has no rights 
-export GITHUB_TOKEN=
-# Copy in the one from the secrets. note, this is only valid for this script
-export GITHUB_TOKEN=${PERSONAL_TOKEN}
-gh cs list
-## gets us this list, but doesn't persist ... 
-echo "Got a codespaces list: " >> $LOG_FILE
-gh cs list >> $LOG_FILE
-echo "... Done"
+# ## Setup GHCLI 
+# # uses GITHUB_TOKEN 
+# # dump the existing token, it has no rights 
+# export GITHUB_TOKEN=
+# # Copy in the one from the secrets. note, this is only valid for this script
+# export GITHUB_TOKEN=${PERSONAL_TOKEN}
+# gh cs list
+# ## gets us this list, but doesn't persist ... 
+# echo "Got a codespaces list: " >> $LOG_FILE
+# gh cs list >> $LOG_FILE
+# echo "... Done"
 
 
 ## Setup the ssh key to clone any private repos that we need. 
