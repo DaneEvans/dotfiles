@@ -20,6 +20,14 @@
 	- This is in the post Create script I think . 
 	- it is possible to do it randomly too 
 
+- [ ] Git settigns 
+in the vscode settigns file (location ??? ) 
+
+
+	"git.autofetch": "all",
+	"git.fetchOnPull": true,
+	"git.postCommitCommand": "sync"
+
 
 
 
