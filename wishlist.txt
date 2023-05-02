@@ -24,6 +24,10 @@
 in the vscode settigns file (location ??? ) 
 
 
+can use jq. to do it in bash: 
+https://stackoverflow.com/questions/56523219/how-to-add-json-value-to-json-file-using-bash-script
+https://stackoverflow.com/questions/42245288/add-new-element-to-existing-json-array-with-jq
+
 	"git.autofetch": "all",
 	"git.fetchOnPull": true,
 	"git.postCommitCommand": "sync"
