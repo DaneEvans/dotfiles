@@ -22,8 +22,8 @@ echo "Done .gitignore" >> $LOG_FILE
 
 
 ## Set an environment variable for user email 
-CMFIVE_USER_EMAIL=dane@2pisoftware.com
-export CMFIVE_USER_EMAIL
+USER_EMAIL=dane@goneepic.com
+export USER_EMAIL
 echo "Set Your email" >> $LOG_FILE
 
 
